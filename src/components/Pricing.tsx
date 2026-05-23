@@ -1,0 +1,136 @@
+import { Ticket, Brain, Headset, Check } from "lucide-react";
+
+const tiers = [
+  {
+    name: "Free",
+    icon: Ticket,
+    subtitle: "Essentials to get started",
+    price: "$0",
+    period: "/ month",
+    cta: "Get Free",
+    ctaStyle: "bg-transparent border border-brand-500/30 text-white hover:bg-brand-500/10",
+    features: [
+      "Daily Mood Tracker",
+      "3 Guided Sessions / month",
+      "Weekly Email Insights",
+      "Basic Habit Reminders"
+    ]
+  },
+  {
+    name: "MindFlow+",
+    icon: Brain,
+    badge: "Popular",
+    subtitle: "Premium — deeper insights & sessions",
+    price: "$9",
+    period: "/ month",
+    cta: "Start Free Trial",
+    ctaStyle: "bg-gradient-to-r from-brand-400 to-brand-500 text-white hover:opacity-90 shadow-lg shadow-brand-500/25 border border-brand-400/50",
+    highlight: true,
+    features: [
+      "Unlimited Guided Sessions",
+      "Personalized Habit Builder",
+      "In-depth Mood Analytics",
+      "Priority Support"
+    ]
+  },
+  {
+    name: "Enterprise",
+    icon: Headset,
+    subtitle: "Team plans & tailored programs",
+    price: "Contact",
+    period: "",
+    cta: "Contact Sales",
+    ctaStyle: "bg-transparent border border-brand-500/30 text-white hover:bg-brand-500/10",
+    features: [
+      "Team & Admin Controls",
+      "Custom Wellness Programs",
+      "Dedicated Success Manager",
+      "Organization-wide Analytics"
+    ]
+  }
+];
+
+export default function Pricing() {
+  return (
+    <section id="pricing" className="w-full py-32 bg-[#020617] text-white">
+      <div className="max-w-7xl mx-auto px-6">
+        
+        {/* Header */}
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6 leading-tight">
+            Start Free Upgrade When<br />You're Ready
+          </h2>
+          <p className="text-gray-400 text-sm md:text-base leading-relaxed max-w-xl mx-auto">
+            Enjoy the essentials for free. Unlock deeper insights and premium sessions with MindFlow+
+          </p>
+        </div>
+
+        {/* Pricing Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {tiers.map((tier, i) => (
+            <div 
+              key={i} 
+              className={`group relative rounded-3xl overflow-hidden flex flex-col p-8 border transition-colors duration-500 ${
+                tier.highlight 
+                  ? 'bg-[#0f172a] border-brand-500/30' 
+                  : 'bg-[#020617] border-white/5 hover:border-brand-500/30 hover:bg-[#0f172a]'
+              }`}
+            >
+              {/* Highlight Background Glow */}
+              <div className={`absolute top-0 right-0 w-64 h-64 bg-brand-500/30 blur-[80px] rounded-full pointer-events-none transition-opacity duration-500 ${tier.highlight ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} />
+              <div className={`absolute top-0 left-0 w-full h-full bg-gradient-to-b from-brand-500/10 to-transparent pointer-events-none transition-opacity duration-500 ${tier.highlight ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} />
+
+              {/* Card Header */}
+              <div className="relative z-10 flex items-center justify-between mb-8">
+                <div className="flex items-center gap-3">
+                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${tier.highlight ? 'bg-brand-500' : 'bg-white/5 border border-white/10'}`}>
+                    <tier.icon className="w-5 h-5 text-white" />
+                  </div>
+                  <span className="text-xl font-medium text-white">{tier.name}</span>
+                </div>
+                {tier.badge && (
+                  <span className="px-3 py-1 bg-white text-[#0f172a] text-[10px] font-bold uppercase tracking-wider rounded-full">
+                    {tier.badge}
+                  </span>
+                )}
+              </div>
+
+              {/* Subtitle */}
+              <p className="text-gray-400 text-xs font-medium mb-6 relative z-10 h-4">
+                {tier.subtitle}
+              </p>
+
+              {/* Price Box */}
+              <div className="bg-white/5 backdrop-blur-sm border border-white/5 rounded-2xl p-6 mb-8 relative z-10">
+                <div className="flex items-baseline gap-1.5 mb-6">
+                  <span className="text-4xl md:text-5xl font-semibold text-white">{tier.price}</span>
+                  {tier.period && <span className="text-sm text-gray-400">{tier.period}</span>}
+                </div>
+                <button className={`w-full py-3.5 rounded-xl font-medium text-sm transition-all duration-300 cursor-pointer ${tier.ctaStyle}`}>
+                  {tier.cta}
+                </button>
+              </div>
+
+              {/* Features List */}
+              <div className="relative z-10 flex-1">
+                <p className="text-white text-sm font-semibold mb-6">What's included</p>
+                <ul className="flex flex-col gap-4">
+                  {tier.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center gap-3 text-sm text-gray-300">
+                      <div className="w-4 h-4 rounded-full bg-brand-500/20 flex items-center justify-center flex-shrink-0">
+                        <Check className="w-2.5 h-2.5 text-brand-400" strokeWidth={3} />
+                      </div>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </section>
+  );
+}
