@@ -82,7 +82,7 @@ export default function Footer() {
               <h3 className="text-white text-sm font-semibold tracking-wide">More Links</h3>
             </div>
             <ul className="flex flex-col gap-4">
-              {['Changelog', 'License', 'Style guide', 'Protected Password', '404'].map(link => (
+              {['Changelog', 'License', 'Style guide', 'Protected Password'].map(link => (
                 <li key={link}>
                   <a href="#" className="text-gray-400 text-sm hover:text-brand-400 transition-colors inline-block">{link}</a>
                 </li>
@@ -96,9 +96,9 @@ export default function Footer() {
         <div className="py-6 flex flex-col md:flex-row items-center justify-between text-[11px] text-gray-500 gap-4">
           <p>© {new Date().getFullYear()} Wahid All rights reserved.</p>
           <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6">
-            <span className="hover:text-white transition-colors cursor-pointer">Powered by - Webflow</span>
+            <span className="hover:text-white transition-colors cursor-pointer">Powered by Ikasle</span>
             <span className="hidden sm:inline text-gray-700">•</span>
-            <span className="hover:text-white transition-colors cursor-pointer">Design & Developed by - Morphic - License</span>
+            {/* <span className="hover:text-white transition-colors cursor-pointer">Design & Developed by - Morphic - License</span> */}
           </div>
         </div>
       </div>
