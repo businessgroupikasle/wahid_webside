@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 
-type TabId = 'reflect' | 'relax' | 'grow' | 'balance';
+type TabId = 'reflect' | 'relax' | 'Remember' | 'Connect';
 
 const tabs: { id: TabId; label: string; description: string }[] = [
   {
@@ -16,13 +16,13 @@ const tabs: { id: TabId; label: string; description: string }[] = [
     description: 'Take a moment to relax with guided audio sessions that calm your mind and reduce stress.',
   },
   {
-    id: 'grow',
-    label: 'Grow',
+    id: 'Remember',
+    label: 'Remember',
     description: 'Build habits that help you grow through structured challenges and daily progress tracking.',
   },
   {
-    id: 'balance',
-    label: 'Balance',
+    id: 'Connect',
+    label: 'Connect',
     description: 'Maintain balance throughout your day by monitoring sleep, movement, and mindfulness.',
   },
 ];
@@ -279,8 +279,8 @@ function PhoneScreen({ tab }: { tab: TabId }) {
   switch (tab) {
     case 'reflect': return <ReflectScreen />;
     case 'relax':   return <RelaxScreen />;
-    case 'grow':    return <GrowScreen />;
-    case 'balance': return <BalanceScreen />;
+    case 'Remember':    return <GrowScreen />;
+    case 'Connect': return <BalanceScreen />;
   }
 }
 

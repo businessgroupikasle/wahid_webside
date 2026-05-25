@@ -70,7 +70,7 @@ export default function Navbar() {
          
         </div>
 
-        <button className="rounded-xl bg-brand-500 bg-gradient-to-r from-brand-400 to-brand-500 px-6 py-2.5 text-sm font-semibold text-gray-900 shadow-lg shadow-brand-500/25 hover:from-brand-300 hover:to-brand-400 hover:shadow-brand-500/40 transition-all active:scale-95 cursor-pointer">
+        <button onClick={() => window.open("http://play.google.com/store/games?hl=en_IN", "_blank")} className="rounded-xl bg-brand-500 bg-gradient-to-r from-brand-400 to-brand-500 px-6 py-2.5 text-sm font-semibold text-gray-900 shadow-lg shadow-brand-500/25 hover:from-brand-300 hover:to-brand-400 hover:shadow-brand-500/40 transition-all active:scale-95 cursor-pointer">
           Download app
         </button>
       </div>
@@ -98,7 +98,7 @@ export default function Navbar() {
           <Link href="#blog" onClick={() => setIsMobileMenuOpen(false)} className="text-2xl font-medium text-gray-200 hover:text-brand-400 transition-colors">
             Blog
           </Link>
-          <button className="mt-4 rounded-xl bg-brand-500 bg-gradient-to-r from-brand-400 to-brand-500 px-8 py-3 text-lg font-semibold text-gray-900 shadow-lg shadow-brand-500/25 hover:from-brand-300 hover:to-brand-400 hover:shadow-brand-500/40 transition-all active:scale-95 cursor-pointer">
+          <button onClick={() => window.open("http://play.google.com/store/games?hl=en_IN", "_blank")} className="mt-4 rounded-xl bg-brand-500 bg-gradient-to-r from-brand-400 to-brand-500 px-8 py-3 text-lg font-semibold text-gray-900 shadow-lg shadow-brand-500/25 hover:from-brand-300 hover:to-brand-400 hover:shadow-brand-500/40 transition-all active:scale-95 cursor-pointer">
             Download app
           </button>
         </div>

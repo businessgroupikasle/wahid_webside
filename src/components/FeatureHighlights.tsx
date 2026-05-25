@@ -56,10 +56,10 @@ function MoodTrackerCard() {
           <div className="w-8 h-8 rounded-lg bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-400">
             <Activity className="w-4 h-4" />
           </div>
-          <h3 className="text-xl font-semibold text-white">Mood Tracker</h3>
+          <h3 className="text-xl font-semibold text-white">Learn the 99 Names</h3>
         </div>
         <p className="text-gray-400 text-sm leading-relaxed">
-          Discover emotional patterns and enhance self-awareness through consistent daily reflection.
+          Explore the meanings, virtues, wisdom, and spiritual significance behind every Beautiful Name of Allah in a simple and engaging format.
         </p>
       </div>
     </div>
@@ -103,10 +103,10 @@ function GuidedMeditationsCard() {
           <div className="w-8 h-8 rounded-lg bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-400">
             <Headphones className="w-4 h-4" />
           </div>
-          <h3 className="text-xl font-semibold text-white">Guided Meditations</h3>
+          <h3 className="text-xl font-semibold text-white">Quran & Hadith References</h3>
         </div>
         <p className="text-gray-400 text-sm leading-relaxed">
-          Enjoy brief, calming audio sessions designed to relieve stress and improve sleep.
+          Discover authentic Quranic verses and verified hadiths connected to each Name, explained in a clear and easy-to-understand way.
         </p>
       </div>
     </div>
@@ -173,10 +173,10 @@ function HabitBuilderCard() {
           <div className="w-8 h-8 rounded-lg bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-400">
             <Zap className="w-4 h-4" />
           </div>
-          <h3 className="text-xl font-semibold text-white">Habit Builder</h3>
+          <h3 className="text-xl font-semibold text-white">Daily Reflections</h3>
         </div>
         <p className="text-gray-400 text-sm leading-relaxed">
-          Build practical, mindful routines that become lasting habits in everyday life.
+          Build consistency in dhikr and remembrance through peaceful reminders, reflections, and daily spiritual learning.
         </p>
       </div>
     </div>
@@ -190,7 +190,7 @@ export default function FeatureHighlights() {
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">Feature Highlights</h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
-            Everything you need to create calm routines and better days—simple, science-driven tools that actually fit into your life.
+            Everything you need to learn, reflect, and connect with Allah through His Beautiful Names, carefully crafted for daily spiritual growth.
           </p>
         </div>
 

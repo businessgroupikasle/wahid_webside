@@ -45,9 +45,9 @@ function ReflectCard() {
       
       {/* Top Text */}
       <div className="p-8 pb-0 relative z-10">
-        <h3 className="text-2xl font-medium text-white mb-4">Reflect</h3>
+        <h3 className="text-2xl font-medium text-white mb-4">Learn</h3>
         <p className="text-gray-400 text-sm leading-relaxed pr-4">
-          Log your mood and thoughts in seconds to gain emotional clarity and self-awareness.
+          Explore the meanings, virtues, Quranic references, and authentic hadiths behind every Beautiful Name of Allah.
         </p>
       </div>
 
@@ -156,9 +156,9 @@ function RelaxCard() {
 
       {/* Bottom Text */}
       <div className="p-8 pt-0 relative z-10">
-        <h3 className="text-2xl font-medium text-white mb-4">Relax</h3>
+        <h3 className="text-2xl font-medium text-white mb-4">Reflect</h3>
         <p className="text-gray-400 text-sm leading-relaxed pr-4">
-          Follow guided breathing or meditation exercises designed to calm your mind and body.
+          Receive daily reminders and spiritual reflections that help strengthen your heart and connection with Allah.
         </p>
       </div>
     </div>
@@ -174,9 +174,9 @@ function GrowCard() {
       
       {/* Top Text */}
       <div className="p-8 pb-0 relative z-10">
-        <h3 className="text-2xl font-medium text-white mb-4">Grow</h3>
+        <h3 className="text-2xl font-medium text-white mb-4">Connect</h3>
         <p className="text-gray-400 text-sm leading-relaxed pr-4">
-          Build small daily habits and watch your progress bloom with gentle motivation and insights.
+          Grow spiritually through remembrance, reflection, and consistent Islamic learning.
         </p>
       </div>
 
@@ -246,9 +246,14 @@ export default function HowItWorks() {
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-64 bg-brand-500/10 rounded-full blur-[100px] pointer-events-none" />
 
           <div className="relative z-10">
-            <h2 className="text-4xl md:text-5xl font-medium text-center mb-16 tracking-tight text-white/90">
-              How It Works
-            </h2>
+            <div className="flex flex-col items-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-medium text-center mb-4 tracking-tight text-white/90">
+                How It Works
+              </h2>
+              <p className="text-gray-400 text-center max-w-2xl text-sm sm:text-base leading-relaxed">
+                A simple and beautiful journey to learn, reflect, and strengthen your connection with Allah every day.
+              </p>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <ReflectCard />
