@@ -15,7 +15,7 @@ const blogs: Blog[] = [
   {
     id: 1,
     title: "Why Learning the 99 Names of Allah Can Transform Your Daily Life",
-    image: "https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=800&auto=format&fit=crop",
+    image: "/blog/blog1.svg",
     content: [
       {
         heading: "",
@@ -42,7 +42,7 @@ const blogs: Blog[] = [
   {
     id: 2,
     title: "A Simple Way to Memorize the 99 Names of Allah",
-    image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=800&auto=format&fit=crop",
+    image: "/blog/blog2.svg",
     content: [
       {
         heading: "",
@@ -73,7 +73,7 @@ const blogs: Blog[] = [
   {
     id: 3,
     title: "The Beauty and Meaning Behind the 99 Names of Allah",
-    image: "https://images.unsplash.com/photo-1602192509154-0b900ee1f851?q=80&w=800&auto=format&fit=crop",
+    image: "/blog/blog3.svg",
     content: [
       {
         heading: "",

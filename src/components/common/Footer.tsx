@@ -51,9 +51,7 @@ export default function Footer() {
               />
               <span className="text-2xl text-white">Wahid</span>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed mb-8 max-w-[280px]">
-              MindFlow nurtures mindfulness, calm, and emotional well-being daily.
-            </p>
+           
             <div className="flex items-center gap-5">
               <IconX className="w-4 h-4 text-white/50 hover:text-white transition-colors cursor-pointer" />
               <IconInstagram className="w-5 h-5 text-white/50 hover:text-white transition-colors cursor-pointer" />

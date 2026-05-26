@@ -58,7 +58,7 @@ function ReflectCard() {
       <div className="flex-1 flex items-end justify-center px-8 mt-8">
         <div className="w-full h-64 relative">
           <img 
-            src="/phonesection/learn.svg" 
+            src="/howitsworks/how1.svg" 
             alt="Learn" 
             className="absolute top-0 left-0 w-full translate-y-4 group-hover:translate-y-2 transition-transform duration-500 drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)]"
           />
@@ -77,7 +77,7 @@ function RelaxCard() {
       <div className="flex-1 flex items-start justify-center px-8 mb-8">
         <div className="w-full h-64 relative">
           <img 
-            src="/phonesection/reflect.svg" 
+            src="/howitsworks/how2.svg" 
             alt="Reflect" 
             className="absolute bottom-0 left-0 w-full -translate-y-4 group-hover:-translate-y-2 transition-transform duration-500 drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)]"
           />
@@ -112,7 +112,7 @@ function GrowCard() {
       <div className="flex-1 flex items-end justify-center px-8 mt-8">
         <div className="w-full h-64 relative">
           <img 
-            src="/phonesection/connect.svg" 
+            src="/howitsworks/how3.svg" 
             alt="Connect" 
             className="absolute top-0 left-0 w-full translate-y-4 group-hover:translate-y-2 transition-transform duration-500 drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)]"
           />
