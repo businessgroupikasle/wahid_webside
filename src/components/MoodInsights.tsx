@@ -44,13 +44,42 @@ export default function MoodInsights() {
     return () => clearInterval(timer);
   }, []);
 
+  const slideLeftVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" as const } },
+  };
+
+  const slideRightVariants = {
+    hidden: { opacity: 0, x: 50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" as const, delay: 0.2 } },
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.15, delayChildren: 0.4 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
   return (
     <section className="w-full py-24 bg-[#020617] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
         
         {/* Left Side: Mockup Container */}
-        <div className="flex-1 w-full max-w-[540px] relative">
-          <div className="relative w-full h-[500px] lg:h-[600px] rounded-[3rem] border border-white/5 bg-[#140b2e] overflow-hidden flex items-end justify-center pt-8 px-8">
+        <motion.div 
+          className="flex-1 w-full max-w-[540px] relative"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={slideLeftVariants}
+        >
+          <div className="relative w-full rounded-[3rem] border border-white/5 bg-[#140b2e] overflow-hidden flex items-center justify-center p-6 lg:p-10">
             
             {/* Background Grid */}
             <div 
@@ -63,19 +92,26 @@ export default function MoodInsights() {
             {/* Top Right Glow */}
             <div className="absolute -top-10 -right-10 w-96 h-96 bg-brand-500/40 rounded-full blur-[100px] pointer-events-none" />
 
-            {/* Phone Image */}
-            <Image 
-              src="/hero/Finally.svg"
-              alt="Finally App Screen"
-              width={320}
-              height={640}
-              className="relative z-10 w-full max-w-[240px] lg:max-w-[280px] h-auto drop-shadow-2xl object-contain -translate-y-4 lg:-translate-y-6"
+            {/* Phone Video */}
+            <video 
+              src="/video/Wahid.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="relative z-10 w-full max-w-[420px] lg:max-w-[520px] xl:max-w-[640px] h-auto drop-shadow-2xl object-contain rounded-[3rem]"
             />
           </div>
-        </div>
+        </motion.div>
 
         {/* Right Side: Content */}
-        <div className="flex-1 flex flex-col justify-center max-w-xl relative z-10">
+        <motion.div 
+          className="flex-1 flex flex-col justify-center max-w-xl relative z-10"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={slideRightVariants}
+        >
           <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-white mb-6 leading-[1.15]">
             Finally an app that brings<br />
             <span className="text-brand-100">You Closer to Allah.</span>
@@ -84,17 +120,20 @@ export default function MoodInsights() {
           <p className="text-gray-400 text-lg leading-relaxed mb-10">
             Wahid is a peaceful and beautifully designed Islamic learning app that helps Muslims deepen their understanding of the 99 Beautiful Names of Allah.          </p>
           
-          <div className="flex flex-col gap-5">
+          <motion.div 
+            className="flex flex-col gap-5"
+            variants={containerVariants}
+          >
             {features.map((feature, idx) => (
-              <div key={idx} className="flex items-center gap-4">
+              <motion.div key={idx} className="flex items-center gap-4" variants={itemVariants}>
                 <div className="w-6 h-6 shrink-0 rounded-full bg-brand-500/10 flex items-center justify-center border border-brand-500/20 text-brand-400">
                   <Check className="w-3.5 h-3.5" />
                 </div>
                 <span className="text-gray-200 font-medium text-[15px]">{feature.title}</span>
-              </div>
+              </motion.div>
             ))}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
       </div>
     </section>

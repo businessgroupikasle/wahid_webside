@@ -1,6 +1,8 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
+import { Apple, Play } from "lucide-react";
 
 export default function CTASection() {
   return (
@@ -104,7 +106,13 @@ export default function CTASection() {
         {/* ════════════════════════════════════════════════════
             CONTENT
         ════════════════════════════════════════════════════ */}
-        <div className="relative z-10 px-6 sm:px-10 max-w-2xl flex flex-col items-center">
+        <motion.div 
+          className="relative z-10 px-6 sm:px-10 max-w-2xl flex flex-col items-center"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
 
           {/* Ornamental badge  ◦ ─── Join us ─── ◦  — brand tinted */}
           <div className="flex items-center gap-2 sm:gap-3 mb-7 sm:mb-8">
@@ -130,56 +138,31 @@ export default function CTASection() {
           </div>
 
           {/* Heading */}
-          <h2 className="text-[34px] sm:text-5xl lg:text-[56px] font-medium tracking-tight text-white mb-4 sm:mb-5 leading-[1.12]">
-            Ready to transform<br className="hidden sm:block" /> your financial management?
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-white mb-4 sm:mb-5 leading-[1.12]">
+            Transform the way you learn the 99 Names of Allah
           </h2>
 
           {/* Subtitle */}
           <p className="text-gray-400 text-sm sm:text-base leading-relaxed mb-9 sm:mb-10 max-w-[660px] mx-auto">
-            Streamline your business's financial management with our intuitive, scalable SaaS platform.
-            Designed for U.S. enterprises, our solutions simplify complex processes.
+           Experience a modern Islamic learning app designed to help you understand, remember, and reflect on Allah’s beautiful Names every day.
           </p>
 
           {/* Store Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 w-full sm:w-auto">
 
-            {/* App Store — dark card */}
-            <button onClick={() => window.open("https://apps.apple.com/", "_blank")} className="group w-full sm:w-auto flex items-center gap-3 bg-[#0a0a0a] hover:bg-[#111] border border-white/[0.10] hover:border-white/20 text-white rounded-2xl px-5 py-3 transition-all duration-200 active:scale-95 cursor-pointer shadow-[0_2px_12px_rgba(0,0,0,0.5)]">
-              {/* Green circle icon */}
-              <div className="w-9 h-9 rounded-full bg-[#22c55e] flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-200">
-                <svg viewBox="0 0 20 20" className="w-5 h-5" fill="none">
-                  <circle cx="10" cy="10" r="2.2" fill="white" />
-                  <circle cx="10" cy="10" r="5"   stroke="white" strokeWidth="1.4" fill="none" />
-                  <line x1="10" y1="1"  x2="10" y2="4"  stroke="white" strokeWidth="1.4" strokeLinecap="round" />
-                  <line x1="10" y1="16" x2="10" y2="19" stroke="white" strokeWidth="1.4" strokeLinecap="round" />
-                  <line x1="1"  y1="10" x2="4"  y2="10" stroke="white" strokeWidth="1.4" strokeLinecap="round" />
-                  <line x1="16" y1="10" x2="19" y2="10" stroke="white" strokeWidth="1.4" strokeLinecap="round" />
-                </svg>
-              </div>
-              <span className="font-semibold text-[15px] tracking-tight">App Store</span>
+            {/* App Store Button */}
+            <button onClick={() => window.open("https://apps.apple.com/", "_blank")} className="group hover:opacity-80 transition-opacity active:scale-95 cursor-pointer w-[160px] flex justify-center">
+              <img src="/buttons/appstore.svg" alt="Download on the App Store" className="h-[46px] sm:h-[50px] w-auto object-contain" />
             </button>
 
-            {/* Play Store — white card */}
-            <button onClick={() => window.open("https://play.google.com/store/games?hl=en_IN", "_blank")} className="group w-full sm:w-auto flex items-center gap-3 bg-white hover:bg-gray-50 border border-gray-200 text-gray-900 rounded-2xl px-5 py-3 transition-all duration-200 active:scale-95 cursor-pointer shadow-[0_2px_12px_rgba(0,0,0,0.12)]">
-              {/* Orange circle icon */}
-              <div className="w-9 h-9 rounded-full bg-[#f97316] flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-200">
-                <svg viewBox="0 0 20 20" className="w-5 h-5" fill="none">
-                  <path
-                    d="M10 4 C6.69 4 4 6.69 4 10 C4 13.31 6.69 16 10 16"
-                    stroke="white" strokeWidth="2" strokeLinecap="round" fill="none"
-                  />
-                  <path
-                    d="M13.5 7.5 L16.5 10 L13.5 12.5"
-                    stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"
-                  />
-                </svg>
-              </div>
-              <span className="font-semibold text-[15px] tracking-tight">Play Store</span>
+            {/* Google Play Button */}
+            <button onClick={() => window.open("https://play.google.com/store/games?hl=en_IN", "_blank")} className="group hover:opacity-80 transition-opacity active:scale-95 cursor-pointer w-[160px] flex justify-center">
+              <img src="/buttons/googleplay.svg" alt="Get it on Google Play" className="h-[46px] sm:h-[50px] w-auto object-contain" />
             </button>
 
           </div>
 
-        </div>
+        </motion.div>
       </div>
     </section>
   );

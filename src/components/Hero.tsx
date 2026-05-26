@@ -93,28 +93,20 @@ export default function Hero() {
 
         {/* Subtitle */}
         <p className="text-sm sm:text-base md:text-lg text-gray-400 mb-8 max-w-[800px] mx-auto leading-relaxed">
-          Wahid helps you explore the meanings, virtues, Quranic references, and authentic hadiths behind the 99 Beautiful Names of Allah designed for daily reflection and spiritual growth.  
+          Wahid helps you explore the meanings, Quranic references, and authentic hadiths behind the 99 Beautiful Names of Allah designed for daily reflection and spiritual growth.  
         </p>
 
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8 sm:mb-12 w-full sm:w-auto">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 mb-8 sm:mb-12 w-full sm:w-auto">
           
           {/* App Store Button */}
-          <button onClick={() => window.open("https://apps.apple.com/", "_blank")} className="flex items-center justify-center gap-2.5 bg-white text-black px-4 py-2.5 rounded-xl hover:bg-gray-100 transition-all font-semibold w-full sm:w-[150px]">
-            <Apple className="w-5 h-5 fill-black" />
-            <div className="text-left">
-              <div className="text-[9px] font-medium leading-none mb-1 text-gray-600">Download on the</div>
-              <div className="text-[13px] leading-none tracking-tight">App Store</div>
-            </div>
+          <button onClick={() => window.open("https://apps.apple.com/", "_blank")} className="group hover:opacity-80 transition-opacity active:scale-95 cursor-pointer w-[160px] flex justify-center">
+            <img src="/buttons/appstore.svg" alt="Download on the App Store" className="h-[46px] sm:h-[50px] w-auto object-contain" />
           </button>
 
           {/* Google Play Button */}
-          <button onClick={() => window.open("https://play.google.com/store/games?hl=en_IN", "_blank")} className="flex items-center justify-center gap-2.5 bg-[#111111] border border-white/10 text-white px-4 py-2.5 rounded-xl hover:bg-[#1a1a1a] transition-all font-semibold w-full sm:w-[150px]">
-            <Play className="w-4 h-4 fill-white" />
-            <div className="text-left">
-              <div className="text-[9px] font-medium leading-none mb-1 text-gray-400">Get it on</div>
-              <div className="text-[13px] leading-none tracking-tight">Google Play</div>
-            </div>
+          <button onClick={() => window.open("https://play.google.com/store/games?hl=en_IN", "_blank")} className="group hover:opacity-80 transition-opacity active:scale-95 cursor-pointer w-[160px] flex justify-center">
+            <img src="/buttons/googleplay.svg" alt="Get it on Google Play" className="h-[46px] sm:h-[50px] w-auto object-contain" />
           </button>
         </div>
       </div>

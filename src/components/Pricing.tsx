@@ -1,75 +1,89 @@
+"use client";
+
 import { Ticket, Brain, Headset, Check } from "lucide-react";
+import { motion } from "framer-motion";
 
 const tiers = [
   {
     name: "Free",
     icon: Ticket,
-    subtitle: "Essentials to get started",
+    subtitle: "Learn the 99 Names of Allah with ease",
     price: "$0",
     period: "/ month",
-    cta: "Get Free",
+    cta: "Start Free",
     ctaStyle: "bg-transparent border border-brand-500/30 text-white hover:bg-brand-500/10",
     features: [
-      "Daily Mood Tracker",
-      "3 Guided Sessions / month",
-      "Weekly Email Insights",
-      "Basic Habit Reminders"
+      "Access to all 99 Names",
+      "Arabic text & transliteration",
+      "Short meanings",
+      "Basic references",
+      "Save favorites"
     ]
   },
   {
-    name: "MindFlow+",
+    name: "Noor+",
     icon: Brain,
     badge: "Popular",
-    subtitle: "Premium — deeper insights & sessions",
-    price: "$9",
+    subtitle: "Deep learning experience",
+    price: "$7",
     period: "/ month",
     cta: "Start Free Trial",
     ctaStyle: "bg-gradient-to-r from-brand-400 to-brand-500 text-white hover:opacity-90 shadow-lg shadow-brand-500/25 border border-brand-400/50",
     highlight: true,
     features: [
-      "Unlimited Guided Sessions",
-      "Personalized Habit Builder",
-      "In-depth Mood Analytics",
-      "Priority Support"
-    ]
-  },
-  {
-    name: "Enterprise",
-    icon: Headset,
-    subtitle: "Team plans & tailored programs",
-    price: "Contact",
-    period: "",
-    cta: "Contact Sales",
-    ctaStyle: "bg-transparent border border-brand-500/30 text-white hover:bg-brand-500/10",
-    features: [
-      "Team & Admin Controls",
-      "Custom Wellness Programs",
-      "Dedicated Success Manager",
-      "Organization-wide Analytics"
+      "Everything in Free",
+      "Detailed explanations & authentic references",
+      "Quranic mentions for each Name",
+      "Audio pronunciation",
+      "Interactive quizzes & progress tracking",
+      "Ad-free experience",
+      "Offline learning access"
     ]
   }
 ];
 
 export default function Pricing() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.15 } }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } }
+  };
+
   return (
     <section id="pricing" className="w-full py-32 bg-[#020617] text-white">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <motion.div 
+          className="text-center max-w-2xl mx-auto mb-16"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={itemVariants}
+        >
           <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6 leading-tight">
-            Start Free Upgrade When<br />You're Ready
+           Unlock a Deeper Learning Experience
           </h2>
           <p className="text-gray-400 text-sm md:text-base leading-relaxed max-w-xl mx-auto">
-            Enjoy the essentials for free. Unlock deeper insights and premium sessions with MindFlow+
-          </p>
-        </div>
+            Go beyond memorization with reflections, quizzes, and authentic references.          </p>
+        </motion.div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+        >
           {tiers.map((tier, i) => (
-            <div 
+            <motion.div 
               key={i} 
+              variants={itemVariants}
               className={`group relative rounded-3xl overflow-hidden flex flex-col p-8 border transition-colors duration-500 ${
                 tier.highlight 
                   ? 'bg-[#0f172a] border-brand-500/30' 
@@ -126,9 +140,9 @@ export default function Pricing() {
                 </ul>
               </div>
 
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
       </div>
     </section>

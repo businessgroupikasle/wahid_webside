@@ -115,18 +115,18 @@ export default function PrivacyPolicyModal() {
                 <p className="mt-2">We do not use invasive tracking technologies.</p>
               </div>
 
-              <div>
+              {/* <div>
                 <h3 className="text-white font-medium mb-2">9. Children's Privacy</h3>
                 <p>Our services are not intended for children under 13 years of age. We do not knowingly collect personal data from children.</p>
-              </div>
+              </div> */}
 
               <div>
-                <h3 className="text-white font-medium mb-2">10. Policy Updates</h3>
+                <h3 className="text-white font-medium mb-2">9. Policy Updates</h3>
                 <p>We may update this Privacy Policy from time to time. Changes will be posted within the application or website.</p>
               </div>
 
               <div>
-                <h3 className="text-white font-medium mb-2">11. Contact Us</h3>
+                <h3 className="text-white font-medium mb-2">10. Contact Us</h3>
                 <p>If you have questions regarding this Privacy Policy, you may contact the Wahid support team through the official application or website.</p>
               </div>
 

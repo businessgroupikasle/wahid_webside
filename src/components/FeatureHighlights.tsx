@@ -1,4 +1,7 @@
+"use client";
+
 import { Zap, Headphones, Activity } from "lucide-react";
+import { motion } from "framer-motion";
 
 function MoodTrackerCard() {
   return (
@@ -59,7 +62,7 @@ function MoodTrackerCard() {
           <h3 className="text-xl font-semibold text-white">Learn the 99 Names</h3>
         </div>
         <p className="text-gray-400 text-sm leading-relaxed">
-          Explore the meanings, virtues, wisdom, and spiritual significance behind every Beautiful Name of Allah in a simple and engaging format.
+          Explore the meanings, wisdom, and spiritual significance behind every Beautiful Name of Allah in a simple and engaging format.
         </p>
       </div>
     </div>
@@ -184,21 +187,43 @@ function HabitBuilderCard() {
 }
 
 export default function FeatureHighlights() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.15 } }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } }
+  };
+
   return (
     <section className="w-full py-32 bg-[#020617] text-white overflow-hidden flex flex-col items-center">
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full">
-        <div className="text-center mb-20">
+        <motion.div 
+          className="text-center mb-20"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={itemVariants}
+        >
           <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">Feature Highlights</h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
             Everything you need to learn, reflect, and connect with Allah through His Beautiful Names, carefully crafted for daily spiritual growth.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <MoodTrackerCard />
-          <GuidedMeditationsCard />
-          <HabitBuilderCard />
-        </div>
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+        >
+          <motion.div variants={itemVariants}><MoodTrackerCard /></motion.div>
+          <motion.div variants={itemVariants}><GuidedMeditationsCard /></motion.div>
+          <motion.div variants={itemVariants}><HabitBuilderCard /></motion.div>
+        </motion.div>
       </div>
 
       {/* Inline styles for Lottie-like animations */}

@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 /* ─── typewriter phrases ─────────────────────────────────── */
 const PHRASES = ["Real Calm", "Real Balance", "Real Peace", "Real Clarity", "Real Focus"];
@@ -197,7 +198,13 @@ export default function Testimonials() {
     <section className="w-full py-16 sm:py-20 md:py-24 lg:py-28 bg-[#020617] overflow-hidden">
 
       {/* ── header ── */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-12 md:mb-14 text-center">
+      <motion.div 
+        className="max-w-7xl mx-auto px-4 sm:px-6 mb-12 md:mb-14 text-center"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
 
         {/* badge */}
         <div className="inline-flex items-center gap-2 rounded-full border border-brand-500/25 bg-brand-500/10 px-4 py-1.5 mb-5">
@@ -217,7 +224,7 @@ export default function Testimonials() {
           Thousands trust MindFlow every day to find clarity, balance, and a
           little more peace.
         </p>
-      </div>
+      </motion.div>
 
       {/* ── scrolling row ── */}
       <div className="relative">

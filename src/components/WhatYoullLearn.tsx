@@ -1,9 +1,12 @@
+"use client";
+
 import { Check } from "lucide-react";
+import { motion } from "framer-motion";
 
 const learningItems = [
   {
     title: "Understand all 99 Beautiful Names of Allah",
-    detail: "Easy, clear explanations for every Name — accessible for beginners and enriching for advanced learners.",
+    detail: "Easy, clear explanations for every Name accessible for beginners and enriching for advanced learners.",
   },
   {
     title: "Explore authentic Quran verses and hadiths",
@@ -13,10 +16,10 @@ const learningItems = [
     title: "Build daily remembrance through reflections",
     detail: "Consistent spiritual insights and dhikr practices woven into your everyday routine.",
   },
-  {
-    title: "Listen to clear and beautiful Arabic pronunciation",
-    detail: "Hear each Name recited with proper Tajweed so you can remember it with your heart and tongue.",
-  },
+  // {
+  //   title: "Listen to clear and beautiful Arabic pronunciation",
+  //   detail: "Hear each Name recited with proper Tajweed so you can remember it with your heart and tongue.",
+  // },
   {
     title: "Strengthen your connection with Allah",
     detail: "Through consistent learning and reflection, deepen your relationship with your Creator.",
@@ -62,19 +65,49 @@ function DecorativeOrb() {
   return (
     <div className="flex items-start justify-center relative w-full h-full mt-4">
       <img 
-        src="/whatlearn/whatwilllearn.svg" 
+        src="/whatlearn/what.svg" 
         alt="What You'll Learn" 
-        className="w-full max-w-[600px] h-auto object-contain drop-shadow-[0_0_40px_rgba(3,183,206,0.15)]"
+        className="w-full max-w-[500px] h-auto object-contain drop-shadow-[0_0_40px_rgba(3,183,206,0.15)]"
       />
     </div>
   );
 }
 
 export default function WhatYoullLearn() {
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" as const },
+    },
+  };
+
+  const slideLeftVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" as const } },
+  };
+
+  const slideRightVariants = {
+    hidden: { opacity: 0, x: 50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" as const, delay: 0.2 } },
+  };
+
   return (
-    <section className="w-full py-24 bg-[#020617] text-white">
+    <section className="w-full py-16 bg-[#020617] text-white">
       <div className="max-w-[1400px] mx-auto px-6">
-        <div className="relative rounded-[3rem] bg-[#0f172a] border border-white/5 px-6 py-20 md:px-16 overflow-hidden">
+        <div className="relative rounded-[3rem] bg-[#0f172a] border border-white/5 px-6 py-14 md:px-16 overflow-hidden">
 
           <StarsBackground />
 
@@ -86,7 +119,12 @@ export default function WhatYoullLearn() {
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
             {/* Left — Heading + Items */}
-            <div>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={slideLeftVariants}
+            >
               {/* Badge */}
               <div className="inline-flex items-center gap-2 bg-brand-500/10 border border-brand-500/20 rounded-full px-4 py-1.5 mb-6">
                 <span className="w-1.5 h-1.5 rounded-full bg-brand-400 animate-pulse" />
@@ -102,15 +140,22 @@ export default function WhatYoullLearn() {
                 </span>
               </h2>
               <p className="text-gray-400 text-sm sm:text-base leading-relaxed mb-10 max-w-lg">
-                A transformative journey through the Beautiful Names of Allah —
+                A transformative journey through the Beautiful Names of Allah 
                 crafted to build knowledge, remembrance, and a lasting spiritual connection.
               </p>
 
               {/* Learning items */}
-              <div className="flex flex-col gap-4">
+              <motion.div 
+                className="flex flex-col gap-4"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+              >
                 {learningItems.map((item, i) => (
-                  <div
+                  <motion.div
                     key={i}
+                    variants={itemVariants}
                     className="flex items-start gap-4 group"
                   >
                     {/* Check circle */}
@@ -127,15 +172,21 @@ export default function WhatYoullLearn() {
                         {item.detail}
                       </p>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
 
             {/* Right — Decorative orb */}
-            <div className="hidden lg:flex items-start justify-center">
+            <motion.div 
+              className="hidden lg:flex items-start justify-center"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={slideRightVariants}
+            >
               <DecorativeOrb />
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

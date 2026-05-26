@@ -2,28 +2,28 @@
 
 import { useState, useEffect, useRef } from "react";
 
-type TabId = 'reflect' | 'relax' | 'Remember' | 'Connect';
+type TabId = 'reflect' | 'learn' | 'memorize' | 'connect';
 
 const tabs: { id: TabId; label: string; description: string }[] = [
   {
     id: 'reflect',
     label: 'Reflect',
-    description: 'Check in with your emotions daily and journal your thoughts to build lasting self-awareness.',
+    description: 'Reflect on the beautiful meanings behind the 99 Names of Allah and strengthen your spiritual connection through daily remembrance. Each Name offers wisdom, peace, and guidance for everyday life.',
   },
   {
-    id: 'relax',
-    label: 'Relax',
-    description: 'Take a moment to relax with guided audio sessions that calm your mind and reduce stress.',
+    id: 'learn',
+    label: 'Learn',
+    description: 'Learn all 99 Names of Allah with easy explanations, Arabic transliteration, and authentic references designed to make Islamic learning simple and accessible for everyone.',
   },
   {
-    id: 'Remember',
-    label: 'Remember',
-    description: 'Build habits that help you grow through structured challenges and daily progress tracking.',
+    id: 'memorize',
+    label: 'Memorize',
+    description: 'Memorize the Names of Allah through interactive quizzes, repetition, and progress tracking that help you build a consistent and meaningful learning habit.',
   },
   {
-    id: 'Connect',
+    id: 'connect',
     label: 'Connect',
-    description: 'Maintain balance throughout your day by monitoring sleep, movement, and mindfulness.',
+    description: 'Connect your heart with Allah by understanding His attributes more deeply and applying the lessons from each Name in your daily life and worship.',
   },
 ];
 
@@ -277,10 +277,10 @@ function BalanceScreen() {
 
 function PhoneScreen({ tab }: { tab: TabId }) {
   switch (tab) {
-    case 'reflect': return <ReflectScreen />;
-    case 'relax':   return <RelaxScreen />;
-    case 'Remember':    return <GrowScreen />;
-    case 'Connect': return <BalanceScreen />;
+    case 'reflect':  return <ReflectScreen />;
+    case 'learn':    return <RelaxScreen />;
+    case 'memorize': return <GrowScreen />;
+    case 'connect':  return <BalanceScreen />;
   }
 }
 
@@ -394,7 +394,7 @@ export default function AppFeatures() {
         <div className="relative w-[280px] md:w-[330px] flex-shrink-0 order-2 flex items-center justify-center">
           <img 
             key={activeTab}
-            src={`/phonesection/${activeTab === 'relax' ? 'learn' : activeTab.toLowerCase()}.svg`}
+            src={`/phonesection/${activeTab === 'memorize' ? 'remember' : activeTab}.svg`}
             alt={`${activeTab} screen`}
             className="w-full h-auto drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] animate-[fadeIn_0.3s_ease]"
           />

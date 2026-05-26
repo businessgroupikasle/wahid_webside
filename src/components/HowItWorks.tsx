@@ -1,4 +1,7 @@
+"use client";
+
 import { ArrowLeft, Lock } from "lucide-react";
+import { motion } from "framer-motion";
 
 function StarsBackground() {
   // Generate a static array of stars to prevent hydration mismatch
@@ -47,7 +50,7 @@ function ReflectCard() {
       <div className="p-8 pb-0 relative z-10">
         <h3 className="text-2xl font-medium text-white mb-4">Learn</h3>
         <p className="text-gray-400 text-sm leading-relaxed pr-4">
-          Explore the meanings, virtues, Quranic references, and authentic hadiths behind every Beautiful Name of Allah.
+          Explore the meanings, Quranic references, and authentic hadiths behind every Beautiful Name of Allah.
         </p>
       </div>
 
@@ -120,6 +123,23 @@ function GrowCard() {
 }
 
 export default function HowItWorks() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.15 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" as const },
+    },
+  };
+
   return (
     <section className="w-full py-24 bg-[#020617] text-white">
       {/* Outer Container with Starry Glow */}
@@ -130,20 +150,32 @@ export default function HowItWorks() {
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-64 bg-brand-500/10 rounded-full blur-[100px] pointer-events-none" />
 
           <div className="relative z-10">
-            <div className="flex flex-col items-center mb-16">
+            <motion.div 
+              className="flex flex-col items-center mb-16"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={itemVariants}
+            >
               <h2 className="text-4xl md:text-5xl font-medium text-center mb-4 tracking-tight text-white/90">
                 How It Works
               </h2>
               <p className="text-gray-400 text-center max-w-2xl text-sm sm:text-base leading-relaxed">
                 A simple and beautiful journey to learn, reflect, and strengthen your connection with Allah every day.
               </p>
-            </div>
+            </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <ReflectCard />
-              <RelaxCard />
-              <GrowCard />
-            </div>
+            <motion.div 
+              className="grid grid-cols-1 md:grid-cols-3 gap-6"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-50px" }}
+            >
+              <motion.div variants={itemVariants} className="h-full"><ReflectCard /></motion.div>
+              <motion.div variants={itemVariants} className="h-full"><RelaxCard /></motion.div>
+              <motion.div variants={itemVariants} className="h-full"><GrowCard /></motion.div>
+            </motion.div>
           </div>
         </div>
       </div>

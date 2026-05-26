@@ -3,6 +3,7 @@ import { AtSign } from "lucide-react";
 import Image from "next/image";
 import FooterMarquee from "./FooterMarquee";
 import PrivacyPolicyModal from "./PrivacyPolicyModal";
+import TermsModal from "./TermsModal";
 
 // Custom SVGs for brand icons removed from lucide-react
 const IconX = ({ className }: { className?: string }) => (
@@ -89,11 +90,10 @@ export default function Footer() {
             </div>
             <ul className="flex flex-col gap-4">
               <li><PrivacyPolicyModal /></li>
-              {['Changelog', 'License', 'Style guide', 'Protected Password'].map(link => (
-                <li key={link}>
-                  <a href="#" className="text-gray-400 text-sm hover:text-brand-400 transition-colors inline-block">{link}</a>
-                </li>
-              ))}
+              <li><TermsModal /></li>
+              {/* <li><a href="#" className="text-gray-400 text-sm hover:text-brand-400 transition-colors inline-block">Changelog</a></li>
+              <li><a href="#" className="text-gray-400 text-sm hover:text-brand-400 transition-colors inline-block">License</a></li>
+              <li><a href="#" className="text-gray-400 text-sm hover:text-brand-400 transition-colors inline-block">Style guide</a></li> */}
             </ul>
           </div>
 
