@@ -390,43 +390,14 @@ export default function AppFeatures() {
           </div>
         </div>
 
-        {/* Center: phone mockup */}
-        <div className="relative w-[280px] h-[560px] md:w-[330px] md:h-[660px] bg-[#0D0D0D] rounded-[48px] flex-shrink-0 shadow-[0_40px_100px_rgba(0,0,0,0.8),inset_0_0_0_1px_rgba(255,255,255,0.08)] order-2">
-          {/* Side buttons */}
-          <div className="absolute -left-[3px] top-24 w-[3px] h-8 bg-[#1c1c1c] rounded-l-sm" />
-          <div className="absolute -left-[3px] top-[144px] w-[3px] h-8 bg-[#1c1c1c] rounded-l-sm" />
-          <div className="absolute -right-[3px] top-32 w-[3px] h-14 bg-[#1c1c1c] rounded-r-sm" />
-
-          {/* Screen */}
-          <div className="absolute inset-[3px] rounded-[45px] overflow-hidden bg-[#0f172a] flex flex-col">
-            {/* Dynamic Island */}
-            <div className="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-6 bg-black rounded-full z-20" />
-
-            {/* Status Bar */}
-            <div className="flex justify-between items-center px-6 pt-4 pb-1 text-[9px] text-white/60 flex-shrink-0 relative z-10">
-              <span className="font-medium">9:41</span>
-              <div className="flex items-center gap-1.5">
-                <div className="flex items-end gap-[2px]">
-                  <div className="w-[2px] h-[6px] bg-white/50 rounded-full" />
-                  <div className="w-[2px] h-[8px] bg-white/50 rounded-full" />
-                  <div className="w-[2px] h-[10px] bg-white/70 rounded-full" />
-                  <div className="w-[2px] h-[12px] bg-white/70 rounded-full" />
-                </div>
-                <div className="flex items-center border border-white/40 rounded-[3px] px-0.5 h-[11px] gap-[1px]">
-                  <div className="w-3 h-[7px] bg-white/80 rounded-[1px]" />
-                  <div className="w-[2px] h-[5px] bg-white/30 rounded-r-[1px]" />
-                </div>
-              </div>
-            </div>
-
-            {/* App content */}
-            <div key={activeTab} className="flex-1 overflow-hidden animate-[fadeIn_0.25s_ease]">
-              <PhoneScreen tab={activeTab} />
-            </div>
-          </div>
-
-          {/* Home indicator */}
-          <div className="absolute bottom-2.5 left-1/2 -translate-x-1/2 w-28 h-1 bg-white/20 rounded-full pointer-events-none" />
+        {/* Center: phone mockup image */}
+        <div className="relative w-[280px] md:w-[330px] flex-shrink-0 order-2 flex items-center justify-center">
+          <img 
+            key={activeTab}
+            src={`/phonesection/${activeTab === 'relax' ? 'learn' : activeTab.toLowerCase()}.svg`}
+            alt={`${activeTab} screen`}
+            className="w-full h-auto drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] animate-[fadeIn_0.3s_ease]"
+          />
         </div>
 
         {/* Right: glassmorphic tab buttons (Desktop Only) */}

@@ -60,79 +60,12 @@ function StarsBackground() {
 
 function DecorativeOrb() {
   return (
-    <div className="flex items-center justify-center relative w-full h-full min-h-[320px]">
-      {/* Outer glow ring */}
-      <div className="absolute w-64 h-64 rounded-full border border-brand-500/20 animate-pulse" style={{ animationDuration: "4s" }} />
-      <div className="absolute w-48 h-48 rounded-full border border-brand-500/30" />
-
-      {/* Rotating dashes ring */}
-      <svg
-        className="absolute w-72 h-72 opacity-20"
-        viewBox="0 0 200 200"
-        style={{ animation: "spinSlow 30s linear infinite" }}
-      >
-        {Array.from({ length: 36 }).map((_, i) => {
-          const angle = (i * 10 * Math.PI) / 180;
-          const r = 96;
-          const x1 = 100 + (r - 4) * Math.cos(angle);
-          const y1 = 100 + (r - 4) * Math.sin(angle);
-          const x2 = 100 + (r + 4) * Math.cos(angle);
-          const y2 = 100 + (r + 4) * Math.sin(angle);
-          return (
-            <line
-              key={i}
-              x1={x1} y1={y1} x2={x2} y2={y2}
-              stroke="#03b7ce"
-              strokeWidth={i % 9 === 0 ? "2" : "0.8"}
-              strokeLinecap="round"
-            />
-          );
-        })}
-      </svg>
-
-      {/* Radial glow */}
-      <div
-        className="absolute w-48 h-48 rounded-full pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(circle at center, rgba(3,183,206,0.30) 0%, rgba(3,183,206,0.10) 55%, transparent 80%)",
-        }}
+    <div className="flex items-start justify-center relative w-full h-full mt-4">
+      <img 
+        src="/whatlearn/whatwilllearn.svg" 
+        alt="What You'll Learn" 
+        className="w-full max-w-[600px] h-auto object-contain drop-shadow-[0_0_40px_rgba(3,183,206,0.15)]"
       />
-
-      {/* Center card */}
-      <div className="relative z-10 flex flex-col items-center justify-center w-36 h-36 rounded-[2rem] bg-[#0a1628] border border-brand-500/30 shadow-[0_0_40px_rgba(3,183,206,0.2)] backdrop-blur-md">
-        <span className="text-5xl font-bold text-brand-400 leading-none" style={{ fontFamily: "serif" }}>
-          ٩٩
-        </span>
-        <span className="text-[10px] text-brand-300/70 tracking-widest uppercase mt-1">
-          Names
-        </span>
-      </div>
-
-      {/* Floating badges */}
-      {[
-        { label: "Al-Rahman", angle: 315, r: 112 },
-        { label: "Al-Kareem", angle: 45,  r: 112 },
-        { label: "Al-Hakeem", angle: 135, r: 112 },
-        { label: "Al-Wadud",  angle: 225, r: 112 },
-      ].map(({ label, angle, r }, i) => {
-        const rad = (angle * Math.PI) / 180;
-        return (
-          <div
-            key={i}
-            className="absolute bg-[#0f172a] border border-brand-500/20 rounded-full px-3 py-1 text-[10px] text-brand-300/80 whitespace-nowrap shadow-lg"
-            style={{
-              transform: `translate(${r * Math.cos(rad)}px, ${r * Math.sin(rad)}px)`,
-            }}
-          >
-            {label}
-          </div>
-        );
-      })}
-
-      <style dangerouslySetInnerHTML={{ __html: `
-        @keyframes spinSlow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-      ` }} />
     </div>
   );
 }
@@ -150,7 +83,7 @@ export default function WhatYoullLearn() {
           {/* Bottom-left glow accent */}
           <div className="absolute bottom-0 left-0 w-96 h-64 bg-brand-500/5 rounded-full blur-[80px] pointer-events-none" />
 
-          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
             {/* Left — Heading + Items */}
             <div>
@@ -200,7 +133,7 @@ export default function WhatYoullLearn() {
             </div>
 
             {/* Right — Decorative orb */}
-            <div className="hidden lg:flex items-center justify-center">
+            <div className="hidden lg:flex items-start justify-center">
               <DecorativeOrb />
             </div>
           </div>
