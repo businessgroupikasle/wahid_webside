@@ -90,7 +90,7 @@ export default function Pricing() {
               <button
                 key={cur}
                 onClick={() => setCurrency(cur)}
-                className={`px-6 py-2 rounded-full text-sm font-medium transition-all cursor-pointer ${
+                className={`px-4 sm:px-6 py-2 rounded-full text-sm font-medium transition-all cursor-pointer ${
                   currency === cur 
                     ? 'bg-white dark:bg-[#020617] text-brand-600 dark:text-brand-400 shadow-sm' 
                     : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'

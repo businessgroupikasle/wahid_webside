@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 function MoodTrackerCard() {
   return (
-    <div className="bg-[#0f172a] border border-white/5 rounded-[2rem] overflow-hidden relative flex flex-col h-[400px]">
+    <div className="bg-[#0f172a] border border-white/5 rounded-[2rem] overflow-hidden relative flex flex-col h-auto min-h-[360px] lg:min-h-[400px]">
       {/* Background Glow */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-brand-500/20 blur-[80px] rounded-full pointer-events-none" />
       {/* Background Grid */}
@@ -42,7 +42,7 @@ function MoodTrackerCard() {
 
 function GuidedMeditationsCard() {
   return (
-    <div className="bg-[#0f172a] border border-white/5 rounded-[2rem] overflow-hidden relative flex flex-col h-[400px]">
+    <div className="bg-[#0f172a] border border-white/5 rounded-[2rem] overflow-hidden relative flex flex-col h-auto min-h-[360px] lg:min-h-[400px]">
       <div className="absolute top-0 right-0 w-64 h-64 bg-brand-500/20 blur-[80px] rounded-full pointer-events-none" />
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: `linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px)`, backgroundSize: '32px 32px' }} />
 
@@ -73,7 +73,7 @@ function GuidedMeditationsCard() {
 
 function HabitBuilderCard() {
   return (
-    <div className="bg-[#0f172a] border border-white/5 rounded-[2rem] overflow-hidden relative flex flex-col h-[400px]">
+    <div className="bg-[#0f172a] border border-white/5 rounded-[2rem] overflow-hidden relative flex flex-col h-auto min-h-[360px] lg:min-h-[400px]">
       <div className="absolute top-0 right-0 w-64 h-64 bg-brand-500/20 blur-[80px] rounded-full pointer-events-none" />
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: `linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px)`, backgroundSize: '32px 32px' }} />
 
@@ -130,7 +130,7 @@ export default function FeatureHighlights() {
         </motion.div>
 
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          className="grid grid-cols-1 lg:grid-cols-3 gap-6"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"

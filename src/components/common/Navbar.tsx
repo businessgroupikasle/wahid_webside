@@ -25,6 +25,9 @@ export default function Navbar() {
       }
       lastScrollY.current = currentScrollY;
 
+      // Close the mobile menu automatically if the user scrolls
+      setIsMobileMenuOpen(false);
+
       // Reset the 5-second inactivity timer on every scroll
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
       
