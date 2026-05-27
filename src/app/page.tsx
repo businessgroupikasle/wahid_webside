@@ -15,37 +15,37 @@ import ScrollReveal from "../components/common/ScrollReveal";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#020617] text-white font-sans selection:bg-brand-500/30">
+    <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-brand-500/30">
       <Navbar />
       <main>
         <ScrollReveal>
           <Hero />
         </ScrollReveal>
-        <ScrollReveal>
+        {/* <ScrollReveal>
           <LogoTicker />
-        </ScrollReveal>
+        </ScrollReveal> */}
         <ScrollReveal>
           <AppFeatures />
         </ScrollReveal>
         <ScrollReveal>
           <MoodInsights />
         </ScrollReveal>
-        <FeatureHighlights />
-        <ScrollReveal>
+        {/* <FeatureHighlights /> */}
+        {/* <ScrollReveal>
           <WhatYoullLearn />
-        </ScrollReveal>
-        <ScrollReveal>
+        </ScrollReveal> */}
+        {/* <ScrollReveal>
           <HowItWorks />
-        </ScrollReveal>
+        </ScrollReveal> */}
         {/* <ScrollReveal>
           <Testimonials />
         </ScrollReveal> */}
         <ScrollReveal>
           <Pricing />
         </ScrollReveal>
-        <ScrollReveal>
+        {/* <ScrollReveal>
           <BlogSection />
-        </ScrollReveal>
+        </ScrollReveal> */}
         <ScrollReveal>
           <CTASection />
         </ScrollReveal>

@@ -28,20 +28,25 @@ const IconLinkedin = ({ className }: { className?: string }) => (
   </svg>
 );
 
+const FacebookIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+  </svg>
+);
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#020617] text-white pt-24 relative overflow-hidden">
+    <footer className="w-full bg-white dark:bg-[#020617] text-slate-900 dark:text-white pt-24 relative overflow-hidden">
       
       {/* Subtle top border */}
-      <div className="absolute top-0 left-6 right-6 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+      <div className="absolute top-0 left-6 right-6 h-px bg-gradient-to-r from-transparent via-slate-200 dark:via-white/10 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Top Section */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 border-b border-slate-200 dark:border-white/10">
           
           {/* Column 1 */}
-          <div className="md:col-span-5 md:pr-12 md:border-r border-white/10 flex flex-col items-start">
+          <div className="md:col-span-5 md:pr-12 md:border-r border-slate-200 dark:border-white/10 flex flex-col items-start">
             <div className="flex items-center gap-3 mb-6">
               <Image 
                 src="/Logo/wahid_logo.svg" 
@@ -49,34 +54,32 @@ export default function Footer() {
                 width={60} 
                 height={60}
               />
-              <span className="text-2xl text-white">Wahid</span>
+              {/* <span className="text-2xl text-slate-900 dark:text-white">Wahid</span> */}
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed mb-8 max-w-[280px]">
-              MindFlow nurtures mindfulness, calm, and emotional well-being daily.
-            </p>
+           
             <div className="flex items-center gap-5">
-              <IconX className="w-4 h-4 text-white/50 hover:text-white transition-colors cursor-pointer" />
-              <IconInstagram className="w-5 h-5 text-white/50 hover:text-white transition-colors cursor-pointer" />
-              <IconLinkedin className="w-5 h-5 text-white/50 hover:text-white transition-colors cursor-pointer" />
-              <AtSign className="w-5 h-5 text-white/50 hover:text-white transition-colors cursor-pointer" />
+              <IconX className="w-4 h-4 text-slate-400 dark:text-white/50 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer" />
+              <IconInstagram className="w-5 h-5 text-slate-400 dark:text-white/50 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer" />
+              <IconLinkedin className="w-5 h-5 text-slate-400 dark:text-white/50 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer" />
+              <FacebookIcon className="w-5 h-5 text-slate-400 dark:text-white/50 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer" />
             </div>
           </div>
 
           {/* Column 2 */}
-          <div className="md:col-span-3 md:pl-6 md:pr-12 md:border-r border-white/10">
+          <div className="md:col-span-3 md:pl-6 md:pr-12 md:border-r border-slate-200 dark:border-white/10">
             <div className="flex items-center gap-2 mb-8">
               <div className="w-1.5 h-1.5 bg-brand-500 rounded-[2px]" />
-              <h3 className="text-white text-sm font-semibold tracking-wide">Quick Links</h3>
+              <h3 className="text-slate-900 dark:text-white text-sm font-semibold tracking-wide">Quick Links</h3>
             </div>
             <ul className="flex flex-col gap-4">
               {[
-                { name: 'Home', href: '#home' },
+                // { name: 'Home', href: '#home' },
                 { name: 'Pricing', href: '#pricing' },
                 { name: 'Features', href: '#features' },
-                { name: 'Blog', href: '#blog' }
+                // { name: 'Blog', href: '#blog' }
               ].map(link => (
                 <li key={link.name}>
-                  <a href={link.href} className="text-gray-400 text-sm hover:text-brand-400 transition-colors inline-block">{link.name}</a>
+                  <a href={link.href} className="text-slate-600 dark:text-gray-400 text-sm hover:text-brand-600 dark:hover:text-brand-400 transition-colors inline-block">{link.name}</a>
                 </li>
               ))}
             </ul>
@@ -86,7 +89,7 @@ export default function Footer() {
           <div className="md:col-span-4 md:pl-6">
             <div className="flex items-center gap-2 mb-8">
               <div className="w-1.5 h-1.5 bg-brand-500 rounded-[2px]" />
-              <h3 className="text-white text-sm font-semibold tracking-wide">More Links</h3>
+              <h3 className="text-slate-900 dark:text-white text-sm font-semibold tracking-wide">More Links</h3>
             </div>
             <ul className="flex flex-col gap-4">
               <li><PrivacyPolicyModal /></li>
@@ -100,18 +103,18 @@ export default function Footer() {
         </div>
 
         {/* Copyright Section */}
-        <div className="py-6 flex flex-col md:flex-row items-center justify-between text-[11px] text-gray-500 gap-4">
+        <div className="py-6 flex flex-col md:flex-row items-center justify-between text-[11px] text-slate-500 dark:text-gray-500 gap-4 border-t border-slate-200 dark:border-white/10">
           <p>© {new Date().getFullYear()} Wahid All rights reserved.</p>
           <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6">
-            <span className="hover:text-white transition-colors cursor-pointer">Powered by Ikasle</span>
-            <span className="hidden sm:inline text-gray-700">•</span>
+            <span className="hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer">Powered by Ikasle</span>
+            <span className="hidden sm:inline text-slate-300 dark:text-gray-700">•</span>
             {/* <span className="hover:text-white transition-colors cursor-pointer">Design & Developed by - Morphic - License</span> */}
           </div>
         </div>
       </div>
 
       {/* Scrolling Text Section */}
-      <FooterMarquee />
+      {/* <FooterMarquee /> */}
       
     </footer>
   );

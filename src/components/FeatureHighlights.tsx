@@ -17,15 +17,11 @@ function MoodTrackerCard() {
 
       {/* Image Container */}
       <div className="flex-1 relative flex items-center justify-center p-6 overflow-hidden">
-        <div className="relative w-full h-full">
-          <Image
-            src="/features/feature1.svg"
-            alt="Learn the 99 Names feature"
-            fill
-            className="object-contain"
-            priority
-          />
-        </div>
+        <img
+          src="/feature/feature1.svg"
+          alt="Learn the 99 Names"
+          className="w-full h-full object-contain transition-transform duration-500 hover:scale-105"
+        />
       </div>
 
       {/* Content */}
@@ -52,14 +48,11 @@ function GuidedMeditationsCard() {
 
       {/* Image Container */}
       <div className="flex-1 relative flex items-center justify-center p-6 overflow-hidden">
-        <div className="relative w-full h-full">
-          <Image
-            src="/features/feature2.svg"
-            alt="Quran & Hadith References feature"
-            fill
-            className="object-contain"
-          />
-        </div>
+        <img
+          src="/feature/feature2.svg"
+          alt="Quran & Hadith References"
+          className="w-full h-full object-contain transition-transform duration-500 hover:scale-105"
+        />
       </div>
 
       {/* Content */}
@@ -86,14 +79,11 @@ function HabitBuilderCard() {
 
       {/* Image Container */}
       <div className="flex-1 relative flex items-center justify-center p-6 overflow-hidden">
-        <div className="relative w-full h-full">
-          <Image
-            src="/features/feature3.svg"
-            alt="Daily Reflections feature"
-            fill
-            className="object-contain"
-          />
-        </div>
+        <img
+          src="/feature/feature3.svg"
+          alt="Daily Reflections"
+          className="w-full h-full object-contain transition-transform duration-500 hover:scale-105"
+        />
       </div>
 
       {/* Content */}
@@ -151,48 +141,6 @@ export default function FeatureHighlights() {
           <motion.div variants={itemVariants}><HabitBuilderCard /></motion.div>
         </motion.div>
       </div>
-
-      {/* Inline styles for Lottie-like animations */}
-      <style dangerouslySetInnerHTML={{__html: `
-        @keyframes lottieSlideThumb {
-          0%, 100% { transform: translateX(0%); }
-          50% { transform: translateX(180px); }
-        }
-        @keyframes lottieSlideFill {
-          0%, 100% { width: 10%; }
-          50% { width: 85%; }
-        }
-        @keyframes lottieBreathe {
-          0%, 100% { transform: scale(0.95); opacity: 0.7; }
-          50% { transform: scale(1.05); opacity: 1; }
-        }
-        @keyframes lottieSpin {
-          0% { transform: rotate(-30deg); }
-          50% { transform: rotate(30deg); }
-          100% { transform: rotate(-30deg); }
-        }
-        @keyframes lottieCounterSpin {
-          0% { transform: rotate(30deg); }
-          50% { transform: rotate(-30deg); }
-          100% { transform: rotate(30deg); }
-        }
-
-        .lottie-mood-thumb {
-          animation: lottieSlideThumb 4s ease-in-out infinite;
-        }
-        .lottie-mood-fill {
-          animation: lottieSlideFill 4s ease-in-out infinite;
-        }
-        .lottie-breathe {
-          animation: lottieBreathe 4s ease-in-out infinite;
-        }
-        .lottie-spin {
-          animation: lottieSpin 8s ease-in-out infinite;
-        }
-        .lottie-counter-spin {
-          animation: lottieCounterSpin 8s ease-in-out infinite;
-        }
-      `}} />
     </section>
   );
 }

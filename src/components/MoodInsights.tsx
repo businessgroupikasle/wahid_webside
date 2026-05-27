@@ -68,7 +68,7 @@ export default function MoodInsights() {
   };
 
   return (
-    <section className="w-full py-24 bg-[#020617] overflow-hidden">
+    <section className="w-full py-8 bg-white dark:bg-[#020617] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
         
         {/* Left Side: Mockup Container */}
@@ -79,18 +79,18 @@ export default function MoodInsights() {
           viewport={{ once: true, margin: "-100px" }}
           variants={slideLeftVariants}
         >
-          <div className="relative w-full rounded-[3rem] border border-white/5 bg-[#140b2e] overflow-hidden flex items-center justify-center p-6 lg:p-10">
+          <div className="relative w-full rounded-[3rem] border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/[0.02] overflow-hidden flex items-center justify-center p-6 lg:p-10 shadow-lg">
             
             {/* Background Grid */}
-            <div 
+            {/* <div 
               className="absolute inset-0 opacity-10 pointer-events-none"
               style={{
                 backgroundImage: `linear-gradient(to right, #03b7ce 1px, transparent 1px), linear-gradient(to bottom, #03b7ce 1px, transparent 1px)`,
                 backgroundSize: '48px 48px'
               }}
-            />
+            /> */}
             {/* Top Right Glow */}
-            <div className="absolute -top-10 -right-10 w-96 h-96 bg-brand-500/40 rounded-full blur-[100px] pointer-events-none" />
+            <div className="absolute -top-10 -right-10 w-96 h-96 bg-brand-500/20 rounded-full blur-[100px] pointer-events-none" />
 
             {/* Phone Video */}
             <video 
@@ -112,12 +112,12 @@ export default function MoodInsights() {
           viewport={{ once: true, margin: "-100px" }}
           variants={slideRightVariants}
         >
-          <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-white mb-6 leading-[1.15]">
+          <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-slate-900 dark:text-white mb-6 leading-[1.15]">
             Finally an app that brings<br />
-            <span className="text-brand-100">You Closer to Allah.</span>
+            <span className="text-brand-600">You Closer to Allah.</span>
           </h2>
           
-          <p className="text-gray-400 text-lg leading-relaxed mb-10">
+          <p className="text-slate-600 dark:text-gray-400 text-lg leading-relaxed mb-10">
             Wahid is a peaceful and beautifully designed Islamic learning app that helps Muslims deepen their understanding of the 99 Beautiful Names of Allah.          </p>
           
           <motion.div 
@@ -126,10 +126,10 @@ export default function MoodInsights() {
           >
             {features.map((feature, idx) => (
               <motion.div key={idx} className="flex items-center gap-4" variants={itemVariants}>
-                <div className="w-6 h-6 shrink-0 rounded-full bg-brand-500/10 flex items-center justify-center border border-brand-500/20 text-brand-400">
+                <div className="w-6 h-6 shrink-0 rounded-full bg-brand-500/10 flex items-center justify-center border border-brand-500/30 text-brand-600">
                   <Check className="w-3.5 h-3.5" />
                 </div>
-                <span className="text-gray-200 font-medium text-[15px]">{feature.title}</span>
+                <span className="text-slate-700 dark:text-gray-300 font-medium text-[15px]">{feature.title}</span>
               </motion.div>
             ))}
           </motion.div>

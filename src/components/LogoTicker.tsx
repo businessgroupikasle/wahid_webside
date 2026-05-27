@@ -1,17 +1,14 @@
-import { HeartHandshake, Box, Layers, BoxSelect, SquareStack, Globe } from "lucide-react";
+import { Sparkles, BookOpen, Quote } from "lucide-react";
 
 const logos = [
-  { icon: HeartHandshake, label: "Mind Coaches" },
-  { icon: Box, label: "Therapists" },
-  { icon: BoxSelect, label: "Yoga Studios" },
-  { icon: Layers, label: "Wellness Retreats" },
-  { icon: SquareStack, label: "Mindfulness" },
-  { icon: Globe, label: "Techwave" },
+  { icon: Sparkles, label: "99 Names of Allah" },
+  { icon: BookOpen, label: "Quran Verses" },
+  { icon: Quote, label: "Hadith Verses" },
 ];
 
 export default function LogoTicker() {
   // We repeat the logos multiple times to ensure enough content to fill wide screens and animate seamlessly
-  const repeatedLogos = [...logos, ...logos, ...logos, ...logos];
+  const repeatedLogos = [...logos, ...logos, ...logos, ...logos, ...logos, ...logos, ...logos, ...logos];
 
   return (
     <section className="w-full py-16 border-t border-white/5 bg-[#020617] overflow-hidden relative flex items-center">
