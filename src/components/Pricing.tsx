@@ -59,7 +59,7 @@ export default function Pricing() {
   };
 
   return (
-    <section id="pricing" className="w-full py-8 bg-white dark:bg-[#020617] text-slate-900 dark:text-white">
+    <section id="pricing" className="w-full py-10  bg-white dark:bg-[#020617] text-slate-900 dark:text-white">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Header */}

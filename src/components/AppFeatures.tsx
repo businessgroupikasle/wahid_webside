@@ -65,7 +65,8 @@ export default function AppFeatures() {
           </h2>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-10">
+        {/* Desktop View (lg and above) */}
+        <div className="hidden lg:flex flex-row items-center justify-center gap-6 lg:gap-10">
           
           {/* Left Column */}
           <div className="flex flex-col gap-6 w-full lg:w-[28%]">
@@ -128,6 +129,75 @@ export default function AppFeatures() {
                   <p className="text-sm text-slate-600 dark:text-white/70 leading-relaxed">
                     {feat.description}
                   </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+
+        {/* Mobile & Tablet View (below lg) */}
+        <div className="block lg:hidden w-full max-w-[600px] mx-auto">
+
+          {/* Stepped accordion cards */}
+          <div className="rounded-xl overflow-hidden border border-slate-300 dark:border-white/10 bg-[#e4e4e4] dark:bg-[#111]/30 shadow-md">
+            {features.map((feat, idx) => (
+              <div
+                key={feat.id}
+                onClick={() => setActiveTab(idx)}
+                className={`relative cursor-pointer border-b border-slate-300 dark:border-white/10 last:border-b-0 transition-colors duration-300 ${
+                  activeTab === idx
+                    ? 'bg-white dark:bg-white/[0.06]'
+                    : 'bg-transparent hover:bg-white/40 dark:hover:bg-white/[0.03]'
+                }`}
+              >
+                {/* Left accent bar */}
+                <div className={`absolute left-0 top-0 bottom-0 w-[3px] bg-brand-500 rounded-none transition-opacity duration-300 ${
+                  activeTab === idx ? 'opacity-100' : 'opacity-0'
+                }`} />
+
+                {/* Row header */}
+                <div className="flex items-center gap-4 px-5 py-4">
+                  <span className="text-[11px] font-bold text-brand-600 dark:text-brand-400 w-5 tabular-nums flex-shrink-0">
+                    {String(idx + 1).padStart(2, '0')}
+                  </span>
+                  <span className={`flex-1 text-sm font-semibold transition-all duration-300 ${
+                    activeTab === idx
+                      ? 'text-slate-900 dark:text-white opacity-100 font-bold'
+                      : 'text-slate-600 dark:text-white/50 opacity-100 font-medium'
+                  }`}>
+                    {feat.label}
+                  </span>
+                  <svg
+                    className={`w-4 h-4 transition-all duration-350 flex-shrink-0 ${
+                      activeTab === idx ? 'rotate-180 text-brand-500' : 'text-slate-400 dark:text-white/25'
+                    }`}
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+
+                {/* Expandable body */}
+                <div className={`grid transition-all duration-500 ease-[cubic-bezier(.4,0,.2,1)] ${
+                  activeTab === idx ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
+                }`}>
+                  <div className="overflow-hidden">
+                    <div className="px-5 pb-5">
+                      {/* Image */}
+                      <div className="w-full aspect-square bg-[#f5f5f5] dark:bg-[#111] rounded-lg overflow-hidden mb-4 flex items-center justify-center border border-black/5 dark:border-white/5 relative max-w-[280px] sm:max-w-[320px] mx-auto">
+                        <img
+                          src={feat.image}
+                          alt={feat.label}
+                          className="max-h-[85%] max-w-[85%] object-contain drop-shadow-xl rounded-lg"
+                        />
+                      </div>
+                      {/* Description */}
+                      <p className="text-sm text-slate-600 dark:text-white/70 leading-relaxed text-center sm:text-left">
+                        {feat.description}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
