@@ -27,19 +27,21 @@ export default function Hero() {
 
         {/* Heading */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-extrabold tracking-tight text-slate-900 dark:text-white mb-5 leading-[1.1] max-w-[720px] mx-auto min-h-[70px] sm:min-h-[80px] md:min-h-[120px]">
-          <Typewriter
-            text="Learn, Reflect & Connect With Allah"
-            speed={60}
-            delay={500}
-            cursor={false}
-          />
+         <h1>An App to Learn and Live By Allah's Beautiful Names</h1>
+          {/* <Typewriter
+           
+            // // speed={60}
+            // delay={500}
+            // cursor={false}
+          /> */}
         </h1>
 
         {/* Subtitle */}
         <p className="text-sm sm:text-base md:text-lg text-slate-500 dark:text-gray-400 mb-10 max-w-[640px] mx-auto leading-relaxed font-medium">
-          Wahid helps you explore the meanings, Quranic references, and authentic
-          hadiths behind the 99 Beautiful Names of Allah designed for daily
-          reflection and spiritual growth.
+          Indeed, Allah has ninety-nine Names, one 
+          hundred except one; whoever memorizes them by heart, understands their meanings, 
+          and lives according to them will enter Paradise
+          <span className="block mt-2 text-xs sm:text-sm opacity-80 text-right">— Ṣaḥīḥ al-Bukhārī 7392, Ṣaḥīḥ Muslim 2677</span>
         </p>
 
         {/* CTA Buttons */}
