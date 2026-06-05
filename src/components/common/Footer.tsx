@@ -58,10 +58,14 @@ export default function Footer() {
             </div>
            
             <div className="flex items-center gap-5">
-              <IconX className="w-4 h-4 text-slate-400 dark:text-white/50 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer" />
-              <IconInstagram className="w-5 h-5 text-slate-400 dark:text-white/50 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer" />
-              <IconLinkedin className="w-5 h-5 text-slate-400 dark:text-white/50 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer" />
-              <FacebookIcon className="w-5 h-5 text-slate-400 dark:text-white/50 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer" />
+              {/* <IconX className="w-4 h-4 text-slate-400 dark:text-white/50 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer" /> */}
+              <a href="https://www.instagram.com/thewahidapp/" target="_blank" rel="noopener noreferrer">
+                <IconInstagram className="w-5 h-5 text-slate-400 dark:text-white/50 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer" />
+              </a>
+              {/* <IconLinkedin className="w-5 h-5 text-slate-400 dark:text-white/50 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer" /> */}
+              <a href="https://www.facebook.com/thewahidapp" target="_blank" rel="noopener noreferrer">
+                <FacebookIcon className="w-5 h-5 text-slate-400 dark:text-white/50 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer" />
+              </a>
             </div>
           </div>
 
@@ -107,7 +111,7 @@ export default function Footer() {
           <p>© {new Date().getFullYear()} Wahid All rights reserved.</p>
           <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6">
             <span className="hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer">Powered by Ikasle</span>
-            <span className="hidden sm:inline text-slate-300 dark:text-gray-700">•</span>
+            <span className="hidden sm:inline text-slate-300 dark:text-gray-700"></span>
             {/* <span className="hover:text-white transition-colors cursor-pointer">Design & Developed by - Morphic - License</span> */}
           </div>
         </div>
