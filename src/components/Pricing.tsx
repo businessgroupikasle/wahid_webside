@@ -7,16 +7,16 @@ const tiers = [
   {
     name: "Free",
     icon: Ticket,
-    subtitle: "Learn the 99 Names of Allah with ease",
+    subtitle: "Discover the 99 Names of Allah",
     prices: { USD: "$0", INR: "₹0", AED: "AED 0" },
     period: "/ month",
     cta: "Start Free",
     ctaStyle: "bg-transparent border border-brand-500/30 text-brand-600 hover:bg-brand-500/10",
     features: [
-      "Access to all 99 Names",
+      "Access all 99 Names",
       "Arabic text & transliteration",
       "Short meanings",
-      "Basic references",
+      "A limited number of reflections",
       "Save favorites"
     ]
   },
@@ -24,20 +24,20 @@ const tiers = [
     name: "Noor+",
     icon: Brain,
     badge: "Popular",
-    subtitle: "Deep learning experience",
-    prices: { USD: "$7", INR: "₹599", AED: "AED 25" },
+    subtitle: "Transform Knowledge into Connection",
+    prices: { USD: "$8", INR: "₹499", AED: "AED 10" },
     period: "/ month",
     cta: "Start Free Trial",
     ctaStyle: "bg-gradient-to-r from-brand-400 to-brand-500 text-white hover:opacity-90 shadow-lg shadow-brand-500/25 border border-brand-400/50",
     highlight: true,
     features: [
-      "Everything in Free",
-      "Detailed explanations & authentic references",
+      "Detailed explanations for every Name",
+      "Authentic Quranic and Hadith references",
       "Quranic mentions for each Name",
-      "Audio pronunciation",
-      "Interactive quizzes & progress tracking",
-      "Ad-free experience",
-      "Offline learning access"
+      "Reflection guides",
+      "Quizzes and progress tracking",
+      "Offline access",
+      // "Offline learning access"
     ]
   }
 ];
@@ -71,10 +71,10 @@ export default function Pricing() {
           variants={itemVariants}
         >
           <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6 leading-tight">
-           Unlock a Deeper Learning Experience
+           Strengthen Your Iman Through the Names of Allah
           </h2>
           <p className="text-slate-600 dark:text-gray-400 text-sm md:text-base leading-relaxed max-w-xl mx-auto">
-            Go beyond memorization with reflections, quizzes, and authentic references.          </p>
+            Explore Allah’s 99 Names with authentic references, reflections, and quizzes that deepen your faith and bring you closer to Allah.        </p>
         </motion.div>
 
         {/* Currency Toggle */}
