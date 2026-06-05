@@ -53,7 +53,7 @@ const features = [
 
 export default function AppFeatures() {
   return (
-    <section id="features" className="bg-white dark:bg-[#0a0a0a] py-20 lg:py-32">
+    <section id="features" className="relative bg-slate-50/50 dark:bg-[#020617] py-20 lg:py-32 border-t border-slate-200 dark:border-white/5">
       {/* Header */}
       <div className="text-center mb-20 lg:mb-28">
         <span className="inline-block text-xs uppercase tracking-[0.25em] font-bold text-brand-600 dark:text-brand-400 bg-brand-500/8 dark:bg-brand-500/10 border border-brand-500/20 px-4 py-1.5 rounded-full mb-5">
