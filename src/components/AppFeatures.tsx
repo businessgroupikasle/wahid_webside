@@ -62,8 +62,8 @@ export default function AppFeatures() {
         <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">
           Thoughtfully Designed for Meaningful Learning
         </h2>
-      </div>
-
+      </div> 
+      
       <div className="w-full max-w-[1100px] mx-auto px-6 lg:px-8 flex flex-col gap-24 lg:gap-36">
         {features.map((feat) => (
           <div
