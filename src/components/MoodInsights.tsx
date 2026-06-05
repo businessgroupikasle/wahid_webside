@@ -7,27 +7,27 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const features = [
   {
-    title: "Simple and meaningful explanations",
+    title: "Discover the meanings that transform hearts",
     screenTitle: "Easy to Understand",
     screenDesc: "Explore the meanings of the 99 Beautiful Names with clarity and depth."
   },
   {
-    title: "Authentic Quranic references",
+    title: "Reflect through authentic Quran and Hadith",
     screenTitle: "Quranic Context",
     screenDesc: "Discover how each name is mentioned and contextualized in the Holy Quran."
   },
   {
-    title: "Verified hadiths and reflections",
+    title: "Learn beautiful Arabic pronunciation",
     screenTitle: "Prophetic Traditions",
     screenDesc: "Read authentic hadiths and thoughtful reflections related to each name."
   },
   {
-    title: "Beautiful Arabic pronunciation",
+    title: "Strengthen your faith with daily reminders",
     screenTitle: "Audio Pronunciations",
     screenDesc: "Listen to beautiful and accurate Arabic pronunciations of the 99 Names."
   },
   {
-    title: "Daily reminders for remembrance and reflection.",
+    title: "Build a deeper relationship with Allah every day",
     screenTitle: "Daily Dhikr",
     screenDesc: "Set daily reminders to reflect and remember the names of Allah throughout your day."
   }
@@ -113,12 +113,12 @@ export default function MoodInsights() {
           variants={slideRightVariants}
         >
           <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-slate-900 dark:text-white mb-6 leading-[1.15]">
-            Finally an app that brings<br />
-            <span className="text-brand-600">You Closer to Allah.</span>
+            Your heart was created to<br />
+            <span className="text-brand-600">know Allah</span>
           </h2>
-          
+
           <p className="text-slate-600 dark:text-gray-400 text-lg leading-relaxed mb-10">
-            Wahid is a peaceful and beautifully designed Islamic learning app that helps Muslims deepen their understanding of the 99 Beautiful Names of Allah.          </p>
+            Whether you seek peace in hardship, gratitude in blessing, or strength in your faith, Wahid helps you reflect on Allah's Names and bring His remembrance into your daily life.          </p>
           
           <motion.div 
             className="flex flex-col gap-5"

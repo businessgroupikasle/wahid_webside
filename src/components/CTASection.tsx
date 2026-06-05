@@ -80,12 +80,13 @@ export default function CTASection() {
 
           {/* Heading */}
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-slate-900 dark:text-white mb-4 sm:mb-5 leading-[1.12]">
-            Transform the way you learn the 99 Names of Allah
+           Know Allah through His Beautiful Names.
           </h2>
 
           {/* Subtitle */}
           <p className="text-slate-600 dark:text-gray-400 text-sm sm:text-base leading-relaxed mb-9 sm:mb-10 max-w-[660px] mx-auto">
-           Experience a modern Islamic learning app designed to help you understand, remember, and reflect on Allah’s beautiful Names every day.
+          Wahid helps you build a daily habit of learning, reflection, and remembrance so you can strengthen your faith, grow closer to Allah, 
+          and walk a path towards Jannah.
           </p>
 
           {/* Store Buttons */}
