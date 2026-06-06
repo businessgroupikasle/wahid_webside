@@ -76,12 +76,7 @@ export default function Footer() {
               <h3 className="text-slate-900 dark:text-white text-sm font-semibold tracking-wide">Quick Links</h3>
             </div>
             <ul className="flex flex-col gap-4">
-              {[
-                // { name: 'Home', href: '#home' },
-                // { name: 'Pricing', href: '#pricing' },
-                // { name: 'Features', href: '#features' },
-                // { name: 'Blog', href: '#blog' }
-              ].map(link => (
+              {([] as Array<{name: string, href: string}>).map(link => (
                 <li key={link.name}>
                   <a href={link.href} className="text-slate-600 dark:text-gray-400 text-sm hover:text-brand-600 dark:hover:text-brand-400 transition-colors inline-block">{link.name}</a>
                 </li>
