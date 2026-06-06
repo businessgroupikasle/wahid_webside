@@ -86,8 +86,8 @@ export default function CTASection() {
 
           {/* Store Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 w-full sm:w-auto">
-
-            {/* App Store Button */}
+ 
+            {/* App Store Button */}  {/* App Store Button */}
             <button onClick={() => window.open("https://apps.apple.com/", "_blank")} className="group hover:opacity-80 transition-opacity active:scale-95 cursor-pointer w-[160px] flex justify-center">
               <img src="/buttons/appstore.svg" alt="Download on the App Store" className="h-[46px] sm:h-[50px] w-auto object-contain" />
             </button>
