@@ -40,9 +40,9 @@ export default function Home() {
         {/* <ScrollReveal>
           <Testimonials />
         </ScrollReveal> */}
-        <ScrollReveal>
+        {/* <ScrollReveal>
           <Pricing />
-        </ScrollReveal>
+        </ScrollReveal> */}
         {/* <ScrollReveal>
           <BlogSection />
         </ScrollReveal> */}

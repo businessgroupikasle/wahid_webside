@@ -26,8 +26,9 @@ export default function Hero() {
         </div> */}
 
         {/* Heading */}
+        <h4 className="text-3xl sm:text-4xl md:text-5xl lg:text-[15px] font-extrabold tracking-tight text-slate-900 dark:text-white mb-5 leading-[1.1]">The Go-To App To</h4>
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-extrabold tracking-tight text-slate-900 dark:text-white mb-5 leading-[1.1] max-w-[720px] mx-auto min-h-[70px] sm:min-h-[80px] md:min-h-[120px]">
-          An App to Learn and Live By Allah's Beautiful Names
+          Learn and Live By Allah's Beautiful Names
           {/* <Typewriter           
             // // speed={60}
             // delay={500}
@@ -37,10 +38,10 @@ export default function Hero() {
 
         {/* Subtitle */}
         <p className="text-sm sm:text-base md:text-lg text-slate-500 dark:text-gray-400 mb-10 max-w-[640px] mx-auto leading-relaxed font-medium">
-          Indeed, Allah has ninety-nine Names, one 
+          "Indeed, Allah has ninety-nine Names, one 
           hundred except one; whoever memorizes them by heart, understands their meanings, 
-          and lives according to them will enter Paradise.
-          <span className="block mt-2 text-xs sm:text-sm opacity-80 text-right">— Ṣaḥīḥ al-Bukhārī 7392, Ṣaḥīḥ Muslim 2677</span>
+          and lives according to them will enter Paradise"
+          <span className="block mt-2 text-xs sm:text-sm opacity-80 text-center">— Ṣaḥīḥ al-Bukhārī 7392, Ṣaḥīḥ Muslim 2677</span>
         </p>
 
         {/* CTA Buttons */}
