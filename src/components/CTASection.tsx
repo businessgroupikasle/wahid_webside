@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import { Apple, Play } from "lucide-react";
 
 export default function CTASection() {
@@ -47,12 +46,8 @@ export default function CTASection() {
         {/* ════════════════════════════════════════════════════
             CONTENT
         ════════════════════════════════════════════════════ */}
-        <motion.div 
+        <div 
           className="relative z-10 px-6 sm:px-10 max-w-2xl flex flex-col items-center"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
         >
 
           {/* Ornamental badge  ◦ ─── Join us ─── ◦  — brand tinted */}
@@ -104,7 +99,7 @@ export default function CTASection() {
 
           </div>
 
-        </motion.div>
+        </div>
       </div>
     </section>
   );

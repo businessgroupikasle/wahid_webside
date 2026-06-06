@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Check } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
 
 const features = [
   {
@@ -72,12 +71,8 @@ export default function MoodInsights() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
         
         {/* Left Side: Mockup Container */}
-        <motion.div 
+        <div 
           className="flex-1 w-full max-w-[540px] relative"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={slideLeftVariants}
         >
           <div className="relative w-full rounded-[3rem] border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/[0.02] overflow-hidden flex items-center justify-center p-6 lg:p-10 shadow-lg">
             
@@ -102,15 +97,11 @@ export default function MoodInsights() {
               className="relative z-10 w-full max-w-[420px] lg:max-w-[520px] xl:max-w-[640px] h-auto drop-shadow-2xl object-contain rounded-[3rem]"
             />
           </div>
-        </motion.div>
+        </div>
 
         {/* Right Side: Content */}
-        <motion.div 
+        <div 
           className="flex-1 flex flex-col justify-center max-w-xl relative z-10"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={slideRightVariants}
         >
           <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-slate-900 dark:text-white mb-6 leading-[1.15]">
             Your heart was created to<br />
@@ -120,20 +111,19 @@ export default function MoodInsights() {
           <p className="text-slate-600 dark:text-gray-400 text-lg leading-relaxed mb-10">
             Whether you seek peace in hardship, gratitude in blessing, or strength in your faith, Wahid helps you reflect on Allah's Names and bring His remembrance into your daily life.          </p>
           
-          <motion.div 
+          <div 
             className="flex flex-col gap-5"
-            variants={containerVariants}
           >
             {features.map((feature, idx) => (
-              <motion.div key={idx} className="flex items-center gap-4" variants={itemVariants}>
+              <div key={idx} className="flex items-center gap-4">
                 <div className="w-6 h-6 shrink-0 rounded-full bg-brand-500/10 flex items-center justify-center border border-brand-500/30 text-brand-600">
                   <Check className="w-3.5 h-3.5" />
                 </div>
                 <span className="text-slate-700 dark:text-gray-300 font-medium text-[15px]">{feature.title}</span>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
 
       </div>
     </section>

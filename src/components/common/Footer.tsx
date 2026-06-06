@@ -78,8 +78,8 @@ export default function Footer() {
             <ul className="flex flex-col gap-4">
               {[
                 // { name: 'Home', href: '#home' },
-                { name: 'Pricing', href: '#pricing' },
-                { name: 'Features', href: '#features' },
+                // { name: 'Pricing', href: '#pricing' },
+                // { name: 'Features', href: '#features' },
                 // { name: 'Blog', href: '#blog' }
               ].map(link => (
                 <li key={link.name}>

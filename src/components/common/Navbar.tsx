@@ -60,9 +60,9 @@ export default function Navbar() {
       <div className="hidden md:flex items-center rounded-2xl border border-slate-200 dark:border-white/[0.08] bg-white/70 dark:bg-white/[0.03] py-2 px-8 md:px-12 lg:px-16 backdrop-blur-md shadow-sm">
         <div className="flex items-center gap-10 md:gap-14 lg:gap-16 mr-6 md:mr-8 lg:mr-10">
           
-          <Link href="#pricing" className="text-sm font-medium text-slate-600 dark:text-gray-200 hover:text-slate-900 dark:hover:text-white transition-colors">
+          {/* <Link href="#pricing" className="text-sm font-medium text-slate-600 dark:text-gray-200 hover:text-slate-900 dark:hover:text-white transition-colors">
             Pricing
-          </Link>
+          </Link> */}
           <Link href="#features" className="text-sm font-medium text-slate-600 dark:text-gray-200 hover:text-slate-900 dark:hover:text-white transition-colors">
             Features
           </Link>
@@ -75,7 +75,7 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <ThemeToggle />
           <button onClick={() => window.open("http://play.google.com/store/games?hl=en_IN", "_blank")} className="rounded-xl bg-brand-500 bg-gradient-to-r from-brand-400 to-brand-500 px-6 py-2.5 text-sm font-semibold text-gray-900 shadow-lg shadow-brand-500/25 hover:from-brand-300 hover:to-brand-400 hover:shadow-brand-500/40 transition-all active:scale-95 cursor-pointer">
-            Download app
+            Download Wahid App
           </button>
         </div>
       </div>
