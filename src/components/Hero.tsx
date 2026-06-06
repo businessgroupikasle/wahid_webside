@@ -38,9 +38,9 @@ export default function Hero() {
 
         {/* Subtitle */}
         <p className="text-sm sm:text-base md:text-lg text-slate-500 dark:text-gray-400 mb-10 max-w-4xl mx-auto leading-relaxed font-medium">
-          ❝Indeed, Allah has ninety-nine Names, one 
+          “Indeed, Allah has ninety-nine Names, one 
           hundred except one; whoever memorizes them by heart, understands their meanings, 
-          and lives according to them will enter Paradise❞
+          and lives according to them will enter Paradise”
           <span className="block mt-2 text-xs sm:text-sm opacity-80 text-center">— Ṣaḥīḥ al-Bukhārī 7392, Ṣaḥīḥ Muslim 2677</span>
         </p>
 
